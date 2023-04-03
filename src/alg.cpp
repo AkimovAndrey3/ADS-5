@@ -35,7 +35,7 @@ int getPrior(char op) {
   return prior;
 }
 
-std::string space1(const std::string& s) {
+std::string space123(const std::string& s) {
   if (s.length() <= 2) return s;
   int n = 2 - s.length() % 2;
   std::string r(s, 0, n);
@@ -47,7 +47,7 @@ std::string space1(const std::string& s) {
 
 std::string infx2pstfx(std::string inf) {
   std::string work;
-  TStack<char, 100> stack1;
+  Tstack<char, 100> stack1;
   for (auto& op : inf) {
     int prior = getPrior(op);
     if (prior == -1) {
@@ -94,7 +94,7 @@ int count(const int& a, const int& b, const int& oper) {
 }
 
 int eval(std::string pref) {
-  TStack<int, 100> stack1;
+  Tstack<int, 100> stack1;
   std::string num = "";
   for (size_t i = 0; i < pref.size(); i++) {
     if (getPrior(pref[i]) == -1) {
