@@ -78,7 +78,7 @@ std::string infx2pstfx(std::string inf) {
     work += stack1.get();
     stack1.pop();
   }
-  work = space1(work);
+  work = space123(work);
   return work;
 }
 
